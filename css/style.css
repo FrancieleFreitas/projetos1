@@ -1,0 +1,371 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    margin: 0;
+    padding: 0;
+    background-color: #F8F9FA; /* Um cinza bem claro */
+    color: #343A40; /* Texto escuro, mas não preto absoluto */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #6C5CE7; /* Roxo vibrante */
+    border-bottom: 5px solid #4A3B9A; /* Borda mais escura */
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: sticky; /* Menu fixo no topo */
+    top: 0;
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #FFFFFF; /* Texto branco para contraste */
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.logo p {
+    margin: 0;
+    font-size: 1em;
+    color: #E0E0E0; /* Cinza claro para o slogan */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFD166; /* Amarelo/laranja vibrante */
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #FFD166;
+    color: #6C5CE7; /* Roxo ao passar o mouse */
+}
+
+/* Main Content */
+main {
+    padding: 30px 0;
+}
+
+/* Seções de Conteúdo (Gerais para Notícias e Institucionais) */
+.content-section,
+.main-headline,
+.other-news {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    border: 1px solid #E0E0E0; /* Borda suave */
+}
+
+.content-section h2,
+.main-headline h2,
+.other-news h2 {
+    text-align: center;
+    color: #6C5CE7; /* Títulos em roxo */
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #E0E0E0;
+    padding-bottom: 10px;
+}
+
+/* Manchete Principal */
+.headline-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Para quebrar a linha em telas menores */
+}
+
+.headline-content img {
+    width: 45%; /* Ajuste o tamanho da imagem da manchete */
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.headline-text {
+    flex: 1;
+    min-width: 300px; /* Garante que o texto não fique muito estreito */
+}
+
+.headline-text h3 {
+    margin-top: 0;
+    color: #FF5E5B; /* Laranja/vermelho para o título da notícia */
+    font-size: 1.8em;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #FF5E5B; /* Botão em laranja/vermelho */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.read-more:hover {
+    background-color: #E63946; /* Tom mais escuro no hover */
+    transform: translateY(-2px); /* Efeito de "levantar" */
+}
+
+/* Outras Notícias */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.news-item {
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens das notícias */
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.news-item h3 {
+    margin: 18px 18px 8px 18px;
+    color: #00BFFF; /* Azul claro para títulos de notícias menores */
+    font-size: 1.4em;
+}
+
+.news-item p {
+    margin: 0 18px 18px 18px;
+    font-size: 0.95em;
+    flex-grow: 1;
+    color: #555;
+}
+
+.news-item .read-more {
+    margin: 0 18px 18px 18px;
+    align-self: flex-start;
+    background-color: #00BFFF; /* Azul claro para os botões */
+}
+
+.news-item .read-more:hover {
+    background-color: #009ACD;
+}
+
+/* Seções Institucionais (Sobre, Equipe, Testemunhos, Contato) */
+.section-about h3,
+.section-team h3,
+.section-testimonials h3,
+.section-contact h3 {
+    color: #6C5CE7;
+    margin-top: 0;
+    border-bottom: 1px solid #F0F0F0;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.section-about ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.section-about ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.section-about ul li::before {
+    content: '✨'; /* Ícone divertido para listas */
+    position: absolute;
+    left: 0;
+    color: #FFD166;
+}
+
+.section-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section-contact ul li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.section-contact ul li strong {
+    margin-right: 8px;
+    color: #6C5CE7;
+}
+
+.section-contact ul li a {
+    color: #FF5E5B;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.section-contact ul li a:hover {
+    color: #E63946;
+}
+
+.testimonial-item {
+    background-color: #F0F8FF; /* Fundo mais suave para testemunhos */
+    border: 1px solid #D0E0F0;
+    border-left: 8px solid #00BFFF; /* Borda lateral azul vibrante */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.testimonial-item p {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+.testimonial-item span {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    color: #6C5CE7;
+    font-size: 0.9em;
+}
+
+
+/* Footer */
+footer {
+    background-color: #343A40; /* Cinza escuro */
+    color: #E0E0E0;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .headline-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headline-content img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 2em;
+    }
+
+    .content-section,
+    .main-headline,
+    .other-news {
+        padding: 20px;
+    }
+
+    .content-section h2,
+    .main-headline h2,
+    .other-news h2 {
+        font-size: 1.8em;
+    }
+
+    .headline-text h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* Estilo para imagens nas páginas de notícia */
+.article-page img {
+  width: 100%; /* A imagem ocupa toda a largura disponível do container */
+  max-width: 350px; /* Limita a imagem para no máximo 350px, mesmo em telas grandes */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove espaços embaixo da imagem (modo "bloco") */
+  margin: 20px 0; /* Centraliza a imagem com espaço acima e abaixo */
+  border-radius: 10px; /* Arredonda os cantos da imagem */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave para destacar a imagem */
+}
+
+/* botão de voltar */
+.back-button {
+    display: inline-block;
+    background-color: #6C5CE7; /* Cor do cabeçalho */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #4A3B9A;
+}
+
