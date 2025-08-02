@@ -21,5 +21,11 @@ O site, chamado **DevDebug News**, traz **notícias fictícias e engraçadas** s
 - Criatividade 💡
 
 ---
+## Visualização do Projeto
+
+Acesse o site aqui:  
+👉 [Clique para visualizar](https://francielefreitas.github.io/Projetos1/)
+
+---
 
 > **Este projeto foi desenvolvido com fins educacionais para a disciplina *Projetos I* do Projeto Desenvolve.**
